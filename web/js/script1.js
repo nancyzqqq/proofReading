@@ -34,6 +34,10 @@ $(document).ready(function() {
   var dataset;
   var finaldataSet;
 
+  // function enableClick(){
+
+
+  // }  
   $.ajax({
     type:"POST",
     url:"request",
@@ -64,7 +68,8 @@ $(document).ready(function() {
                 console.log(finaldataSet);
                 $('#table').DataTable( {
                     data: finaldataSet,
-                    
+                    "lengthMenu": [5, 10],
+                    "order": [[ 1, "asc" ]],
                     columns: [
                     { title: "Paper Name" },
                     { title: "Paper Deadline" },
@@ -87,21 +92,6 @@ var Set = [
 console.log(Set);
 console.log(finaldataSet);
 
- // $('#table').DataTable( {
- //        data: finaldataSet,
- //        columns: [
- //            { title: "Paper Name" },
- //            { title: "Paper Deadline" },
- //            { title: "Paper Description" },
- //            { title: "Paper Requirement" },
- //            { title: "Paper Domain" }
- //        ]
- //    } );
-
-
-
-
-// } );
 
 
 

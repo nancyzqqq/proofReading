@@ -43,17 +43,18 @@ public class requestFormServlet extends HttpServlet {
         String paperRequirement = request.getParameter("form-requirement");
         String paper_Domain = request.getParameter("form-paperDomain");
         String username = (String) request.getSession().getAttribute("username");
-
+        System.out.println("paperdomain"+paper_Domain);
         int papaerDomain = 0;
-        if(paper_Domain == "cs"){
+        if(paper_Domain.equals("cs")){
             papaerDomain = 0;
         }
-        if(paper_Domain == "is"){
+        if(paper_Domain.equals("is")){
             papaerDomain = 1;
         }
-        if(paper_Domain == "lis"){
+        if(paper_Domain.equals("lis")){
             papaerDomain = 2;
         }
+        System.out.println("paperdomain"+papaerDomain);
         DBConnect db = new DBConnect();
 
 

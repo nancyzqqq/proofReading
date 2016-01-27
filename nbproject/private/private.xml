@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Users/zhangqian/NetBeansProjects/PReadingSimple/src/java/edu/pitt/servlets/checkAvail.java</file>
+            <file>file:/Users/zhangqian/NetBeansProjects/PReadingSimple/src/java/edu/pitt/servlets/userSettingServlet.java</file>
+            <file>file:/Users/zhangqian/NetBeansProjects/PReadingSimple/src/java/edu/pitt/Utils/SessionUtils.java</file>
+            <file>file:/Users/zhangqian/NetBeansProjects/PReadingSimple/src/java/edu/pitt/servlets/GetRequestsServlet.java</file>
+            <file>file:/Users/zhangqian/NetBeansProjects/PReadingSimple/src/java/edu/pitt/Utils/DBConnect.java</file>
+            <file>file:/Users/zhangqian/NetBeansProjects/PReadingSimple/src/java/edu/pitt/beans/taskBean.java</file>
+        </group>
+    </open-files>
+</project-private>

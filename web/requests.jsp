@@ -67,6 +67,7 @@
         <div id="page-content-wrapper">
             <div class="container-fluid" id="mainIntro">
                 <div class="row">
+                    
                     <div class="col-lg-12" style="font-family:Open Sans">
                         <h1 style="display:block;width:100%;height:100px;">See all requests you've made here,<h2 id = "username"><%=request.getSession().getAttribute("username")%></h2></h1>
                         <hr>
