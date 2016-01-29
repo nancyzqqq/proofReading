@@ -8,7 +8,9 @@
             <file>file:/Users/zhangqian/NetBeansProjects/PReadingSimple/src/java/edu/pitt/Utils/SessionUtils.java</file>
             <file>file:/Users/zhangqian/NetBeansProjects/PReadingSimple/src/java/edu/pitt/servlets/GetRequestsServlet.java</file>
             <file>file:/Users/zhangqian/NetBeansProjects/PReadingSimple/src/java/edu/pitt/Utils/DBConnect.java</file>
+            <file>file:/Users/zhangqian/NetBeansProjects/PReadingSimple/web/requests.jsp</file>
             <file>file:/Users/zhangqian/NetBeansProjects/PReadingSimple/src/java/edu/pitt/beans/taskBean.java</file>
+            <file>file:/Users/zhangqian/NetBeansProjects/PReadingSimple/src/java/edu/pitt/servlets/requestFormServlet.java</file>
         </group>
     </open-files>
 </project-private>
