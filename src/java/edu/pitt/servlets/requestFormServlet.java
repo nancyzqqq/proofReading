@@ -27,6 +27,7 @@ public class requestFormServlet extends HttpServlet {
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
+     * 
      *
      * @param request servlet request
      * @param response servlet response
@@ -54,6 +55,10 @@ public class requestFormServlet extends HttpServlet {
         if(paper_Domain.equals("lis")){
             papaerDomain = 2;
         }
+        
+        
+        
+        
         System.out.println("paperdomain"+papaerDomain);
         DBConnect db = new DBConnect();
 

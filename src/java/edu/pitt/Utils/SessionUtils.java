@@ -22,4 +22,7 @@ public class SessionUtils {
         request.getSession().setAttribute("username", username);
         
     }
+    public static void addSession(){
+        
+    }
 }

@@ -46,7 +46,7 @@ $(document).ready(function() {
                 //console.log(msg);
                 
                 dataset = msg;
-                //console.log(dataset);
+                console.log(dataset);
                 var sub_arr = dataset.split(";"); 
                 //console.log("subarr"+sub_arr);
                 var len = sub_arr.length;
@@ -58,7 +58,7 @@ $(document).ready(function() {
                     
                     var temp = sub_arr[i].substring(1,sub_arr[i].length-1);
                     //console.log("temp "+temp);
-                    var arrtemp = temp.split(",");
+                    var arrtemp = temp.split("-!");
                     arr[i] = arrtemp;
                     //console.log(arrtemp);
                     

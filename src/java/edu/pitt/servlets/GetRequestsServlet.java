@@ -5,8 +5,7 @@
  */
 package edu.pitt.servlets;
 
-import DataTable.DataTablesParamUtility;
-import DataTable.JQueryDataTableParamModel;
+
 import edu.pitt.Utils.DBConnect;
 import edu.pitt.beans.taskBean;
 import java.io.IOException;
@@ -108,7 +107,7 @@ public class GetRequestsServlet extends HttpServlet {
             }else{
                 domain_1 = "Library Information Science";
             }
-            sub = "["+paperName+","+paperDeadline+","+paperDescription+","+paperRequirement+","+domain_1+"]";
+            sub = "["+paperName+"-!"+paperDeadline+"-!"+paperDescription+"-!"+paperRequirement+"-!"+domain_1+"]";
             dataset = dataset +";" +sub; 
             
         }

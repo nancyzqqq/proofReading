@@ -15,7 +15,7 @@ boolean cs = domainInterests.contains("Computer Science");
 boolean is = domainInterests.contains("Information Science");
 boolean lis = domainInterests.contains("Library Information System");
 
-out.println(domainInterests);
+//.println(domainInterests);
 
     //out.println(firstname);
 if(firstname == null){
