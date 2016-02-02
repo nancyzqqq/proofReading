@@ -15,9 +15,7 @@ boolean cs = domainInterests.contains("Computer Science");
 boolean is = domainInterests.contains("Information Science");
 boolean lis = domainInterests.contains("Library Information System");
 
-//.println(domainInterests);
 
-    //out.println(firstname);
 if(firstname == null){
 firstname = "Please ini your firstname....";
 }
@@ -124,7 +122,7 @@ institution ="Please ini your institution...";
                     <div class="col-md-6">
                       <label for="" class="col-md-4 control-label">First Name</label>
                       <div class="col-md-8">
-                        <input type="text" class="form-control" id="firstname" name="form_firtname" placeholder=<% out.println(firstname); %>>
+                        <input type="text" class="form-control" id="firstname" name="form_firstname" placeholder=<% out.println(firstname); %>>
                       </div>
                     </div>
 

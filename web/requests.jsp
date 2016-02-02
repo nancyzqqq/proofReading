@@ -39,6 +39,9 @@
                 word-break: normal
             }
         </style>
+        <script type="text/javascript">
+            
+        </script>
     </head>
     <body>
         <div id="wrapper">

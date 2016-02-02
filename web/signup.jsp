@@ -61,12 +61,13 @@
                                         <div style="color:#fff" id="status"></div>
 			                        </div>
                                     <div class="form-group">
-                                        <label class="sr-only" for="form-username">E-mail</label>
-                                        <input type="text" name="form-email1" placeholder="E-mail..." class="form-username form-control" id="form-username">
+                                        <label class="sr-only" for="form-email">E-mail</label>
+                                        <input type="text" name="form-email1" placeholder="E-mail..." class="form-username form-control" id="email1">
                                     </div>
                                       <div class="form-group">
-                                        <label class="sr-only" for="form-username">E-mail</label>
-                                        <input type="text" name="form-email2" placeholder="Confirm your E-mail..." class="form-username form-control" id="form-username">
+                                        <label class="sr-only" for="form-email">E-mail</label>
+                                        <input type="text" name="form-email2" placeholder="Confirm your E-mail..." class="form-username form-control" id="email2">
+                                        <div id = "emailMessage" style="color:#fff"></div>
                                     </div>
 			                        <div class="form-group">
 			                        	<label class="sr-only" for="form-password">Password</label>
@@ -79,7 +80,7 @@
                                     </div>
                                   
 
-                                    <button class="btn" id="login1" style="">Log in</button>
+                                    <button type = "button" class="btn" id="login1" style="">Log in</button>
 			                    </form>
 		                    </div>
                         </div>
@@ -111,9 +112,7 @@
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <script src="js/jquery.backstretch.min.js"></script>
         <script src="js/regUser.js"></script>
-        <script type="text/javascript">
-        
-        </script>
+
 
 
     </body>

@@ -9,7 +9,6 @@ import edu.pitt.Utils.DBConnect;
 import edu.pitt.beans.userBasicInfoBean;
 import edu.pitt.beans.userBean;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -56,29 +55,25 @@ public class signinServlet extends HttpServlet {
         String email = user.getEmail();
         int type = user.getType();
         if (passwordDB.equals(password)){
-        tojsp = "usermainpage.jsp";
-        //String query1 =   "select * from user_basic_info where username = '"+username+"'";
-        String query1 =   "SELECT * FROM user_basic_info WHERE UserName = 'Test2'";
-        ArrayList<userBasicInfoBean> arrInfo = new ArrayList<userBasicInfoBean>();
-        arrInfo =db.searchBasicInfo(query1);
-        //System.out.println("-----"+arrInfo.size());
-        userBasicInfoBean userInfo = arrInfo.get(0);
-        String firstname = userInfo.getFirstname();
-        System.out.println(firstname+"~~~~~~~~~~");
-        System.out.println(type+"type~~~~~~~~~~");
-        
-        request.getSession().setAttribute("user", user);
-        
-        request.getSession().setAttribute("userBasicInfo", userInfo);
-        request.getSession().setAttribute("username", username);
-        RequestDispatcher rd = request.getRequestDispatcher(tojsp);
-        rd.forward(request, response);
+            tojsp = "usermainpage.jsp";
+            String query1 = "SELECT * FROM user_basic_info WHERE UserName = '"+username+"'";
+            ArrayList<userBasicInfoBean> arrInfo = new ArrayList<userBasicInfoBean>();
+            arrInfo =db.searchBasicInfo(query1);
+            userBasicInfoBean userInfo = arrInfo.get(0);
+            String firstname = userInfo.getFirstname();
+            System.out.println(firstname+"~~~~~~~~~~");
+            System.out.println(type+"type~~~~~~~~~~");
 
-       
-       }else{
-            request.setAttribute("error", "Unknown user, please try again");
-            request.getRequestDispatcher("index.jsp").forward(request, response);
-       }
+            request.getSession().setAttribute("user", user);
+
+            request.getSession().setAttribute("userBasicInfo", userInfo);
+            request.getSession().setAttribute("username", username);
+            RequestDispatcher rd = request.getRequestDispatcher(tojsp);
+            rd.forward(request, response);
+        }else{
+             request.setAttribute("error", "Unknown user, please try again");
+             request.getRequestDispatcher("index.jsp").forward(request, response);
+        }
             
        
         

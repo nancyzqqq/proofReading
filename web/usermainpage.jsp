@@ -68,7 +68,7 @@ if(type == 0){
                     <a href="userBasicInfoSetting.jsp" style="color:#fff">Settings</a>
                 </li>
                 <li>
-                    <a  id="" href="logout.jsp" style="color:#fff">Log out</a>
+                    <a href="logout.jsp" style="color:#fff">Log out</a>
                 </li>
             </ul>
         </div>

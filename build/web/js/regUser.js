@@ -1,9 +1,16 @@
+function checkEqual(a,b){
+    var email1 =  $("#email1").val();
+    var email2 =  $("#email2").val();
+    if(email1 != email2){
+        $("#emailMessage").html("Please recheck your email!");
+    }
 
+}
 jQuery(document).ready(function() {
 
-    //$("#status").html("124");
-    //document.getElementById("status").innerHTML="123";
-
+    $("#email2").bind("blur",function(){
+        checkEqual();
+    })
 
     /*
        validate username availabilty
@@ -44,19 +51,7 @@ jQuery(document).ready(function() {
     	$(this).removeClass('input-error');
     });
     
-    // $('.login-form').on('submit', function(e) {
-    	
-    // 	$(this).find('input[type="text"], input[type="password"], textarea').each(function(){
-    // 		if( $(this).val() == "" ) {
-    // 			e.preventDefault();
-    // 			$(this).addClass('input-error');
-    // 		}
-    // 		else {
-    // 			$(this).removeClass('input-error');
-    // 		}
-    // 	});
-    	
-    // });
+
     
     
 });

@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import edu.pitt.Utils.DBConnect;
+import edu.pitt.beans.userBasicInfoBean;
 import edu.pitt.beans.userBean;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -37,7 +38,7 @@ public class userSignUpServlet extends HttpServlet {
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, Exception {
-       String toJSP;
+//       String toJSP;
        response.setContentType("text/html");
        
        String username = request.getParameter("form-username");
@@ -45,11 +46,14 @@ public class userSignUpServlet extends HttpServlet {
        String password = request.getParameter("form-password");
        int type = 0;
        
-       System.out.print("================"+username);
+//       System.out.println("Test================Test"+username);
        
-       userBean user = new userBean(username,email,password,type);
-//       request.setAttribute("username", username);
-       request.getSession().setAttribute("username",username);
+       userBean user = new userBean(username, email, password, type);
+       userBasicInfoBean userBasicInfo = new userBasicInfoBean(username,null,null,null,null);
+       
+       request.getSession().setAttribute("user", user);
+       request.getSession().setAttribute("userBasicInfo", userBasicInfo);
+       request.getSession().setAttribute("username", username);
        
        DBConnect db = new DBConnect();
        //check for unique by email address
@@ -62,22 +66,16 @@ public class userSignUpServlet extends HttpServlet {
 //       }
        String insertQuery = "INSERT INTO USER(UserName,Password,Email,TYPE) VALUES('"+username+"','"+password+"','"+email+"','"+type+"')";
        String insertBasicInfoQuery = "INSERT INTO user_basic_info(UserName,firstname,lastname,institution,domain_of_interests) VALUES('"+username+"','null','null','null','null')";
-       try
-            {
-              
-            db.query(insertQuery);
-            db.query(insertBasicInfoQuery);
-
-            
-            }
-            catch(Exception e)
-            {
-                System.out.println("insert failed");
-            }
+       try{ 
+          db.query(insertQuery);
+          db.query(insertBasicInfoQuery);
+        } catch(Exception e) {
+          System.out.println("insert failed");
+        }
        //db.query(insertQuery);
-       toJSP = "usermainpage.jsp";
-       request.getRequestDispatcher(toJSP).forward(request, response);
-       
+//       toJSP = "usermainpage.jsp";
+       RequestDispatcher rd = request.getRequestDispatcher("usermainpage.jsp");
+       rd.forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -59,7 +59,7 @@ function clickVolSection(usertype){
 
 $(document).ready(function() {
 
-
+  $("#dialog").hide();
 	$("#requestForm").hide();
 	$("#requestForm").css("backrgound-image","url(img/backgrounds/5022.png) no-repeat");
 
