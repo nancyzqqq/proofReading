@@ -1,7 +1,6 @@
 
 jQuery(document).ready(function() {
 
-   // $("#status").html("124");
 
 
     /*
@@ -16,13 +15,9 @@ jQuery(document).ready(function() {
             data:"username=" + username,
             success:function(msg){
                 console.log(msg);
-                alert(msg);
+                //alert(msg);
                 $("#status").html (msg);
-                // $("#status").ajaxComplete(function(event, request, settings){
-                   
-                //     console.log(msg);
-                //     $("#status").val(msg);  
-                // });
+
             }
 
         });

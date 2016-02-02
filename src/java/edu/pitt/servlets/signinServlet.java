@@ -54,13 +54,7 @@ public class signinServlet extends HttpServlet {
         System.out.println(arr.size()+"size");
         String passwordDB = user.getPassword();
         String email = user.getEmail();
-        // System.out.println(email+"-email");
-        // System.out.println(passwordDB+"-password");
-        // System.out.println(user.getUername()+"-username");
-        // System.out.println(user.getUserID()+"-userid");
-        // System.out.println(user.getType()+"-usertype");
-        
-        // System.out.println(password+"===============");
+        int type = user.getType();
         if (passwordDB.equals(password)){
         tojsp = "usermainpage.jsp";
         //String query1 =   "select * from user_basic_info where username = '"+username+"'";
@@ -71,7 +65,10 @@ public class signinServlet extends HttpServlet {
         userBasicInfoBean userInfo = arrInfo.get(0);
         String firstname = userInfo.getFirstname();
         System.out.println(firstname+"~~~~~~~~~~");
+        System.out.println(type+"type~~~~~~~~~~");
+        
         request.getSession().setAttribute("user", user);
+        
         request.getSession().setAttribute("userBasicInfo", userInfo);
         request.getSession().setAttribute("username", username);
         RequestDispatcher rd = request.getRequestDispatcher(tojsp);

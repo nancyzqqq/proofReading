@@ -6,7 +6,7 @@
 <%
 String name = (String) request.getSession().getAttribute("username");
 userBasicInfoBean userInfo = (userBasicInfoBean) request.getSession().getAttribute("userBasicInfo");
-    //out.println(name);
+
 String firstname = userInfo.getFirstname();
 String lastname = userInfo.getLastname();
 String institution = userInfo.getInstitution();
@@ -38,7 +38,7 @@ institution ="Please ini your institution...";
   <meta name="description" content="">
   <meta name="author" content="">
   <script src="js/jquery-1.11.1.min.js"></script>
-  <title>Settings</title>
+  <title>ProofReading User Basic Information Setting</title>
 
   <!-- Bootstrap Core CSS -->
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -50,15 +50,15 @@ institution ="Please ini your institution...";
   <!-- Google Font CSS -->
   <link href='https://fonts.googleapis.com/css?family=Oswald|Montserrat|Dosis|Francois+One|Righteous|Roboto+Mono|Volkhov' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,greek,greek-ext' rel='stylesheet' type='text/css'>
+  <!-- jquery dialog -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  
 
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/typeahead.js/bloodhound.js" type="text/javascript"></script>
-  <script src="js/typeahead.js/typeahead.jquery.js" type="text/javascript"></script>
-  <!-- New CSS-->
-  <script src="js/typeahead.js/typeahead.bundle.js" type="text/javascript"></script>
-  <!-- New CSS-->
-  <!-- <link rel="stylesheet" href="css/settingForm.css"> -->
-  <!-- /<script type="text/javascript" src="js/script1.js"></script> -->
+  
+
+   <script type="text/javascript" src="js/checkVol.js"></script>
 
 
 </head>
@@ -83,7 +83,7 @@ institution ="Please ini your institution...";
         </li>
 
         <li>
-          <a href="#" style="color:#fff">Events</a>
+          <a id = "volPointer" href="#" style="color:#fff">My Voluntary</a>
         </li>
 
         <li style="background-color:rgba(256,256,256,0.2)">
@@ -112,6 +112,7 @@ institution ="Please ini your institution...";
                   <h3 style="color:#1976D2;font-family: 'Montserrat', sans-serif;font-size:40px"><strong>Optimize</strong> your file now!</h3>
 
                   <p style="color:#2196F3;font-size:20px">Please enter the basic information about your request:</p>
+                  <p id = "username" ><% out.println(name); %></p>
                 </div>
                 <div class="form-top-right">
                   <i class="fa fa-file-text-o" style="color:#F44336"></i>
@@ -183,25 +184,14 @@ institution ="Please ini your institution...";
 <!-- /#page-content-wrapper -->
 
 </div>
+ <div id="dialog" title="Basic dialog">
+            <p>You have to register to be a volunteer!</p>
+</div>
 
 
 <script type="text/javascript">
 
-//     var institution = new Bloodhound({
-//       datumTokenizer: Bloodhound.tokenizers.whitespace,
-//       queryTokenizer: Bloodhound.tokenizers.whitespace,
-//   // url points to a json file that contains an array of country names, see
-//   // https://github.com/twitter/typeahead.js/blob/gh-pages/data/countries.json
-//       prefetch: 'doc/insititutions.csv'
-// });
-//     console.log("456");
 
-
-// $('#institution .typeahead').typeahead(null, {
-//   name: 'institution',
-//   source: institution
-// });
-// console.log("123");
 </script>
 
 

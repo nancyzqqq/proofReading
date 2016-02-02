@@ -67,7 +67,7 @@ jQuery(document).ready(function() {
             wrap.removeChild(lastExp);
             var wrap_exp_1 = document.getElementById("experiences");
             var temp_1 = document.getElementsByClassName(expName);
-            var size_1 = temp.length;
+            var size_1 = temp_1.length;
             console.log("newsize = "+ size_1)
             if(size_1 == 1){
                 var wrap_button = document.getElementById("delExp");

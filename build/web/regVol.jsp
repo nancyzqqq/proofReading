@@ -78,13 +78,13 @@ userBean user = (userBean) request.getSession().getAttribute("user");
                     </div>
                 </div>
                 <div class="form-bottom">
-                    <form role="form" action="" method="post" class="form-horizontal" style="font-family:Open Sans; color:#727272">
+                    <form role="form" action="regVolServlet" method="post" class="form-horizontal" style="font-family:Open Sans; color:#727272">
                         
                        
                             
                         <div class="form-group">
                             <div class="container">
-                                <label class="" for="form-first-name" style="color:#fff;font-size:20px;display:block">Please give us your previous proofreading experience...
+                                <label class="" for="form-first-name" style="color:#fff;font-size:20px;display:block;font-weight:400">Please give us your previous proofreading experience...
                                 </label>
                             </div>
                         </div>
@@ -127,28 +127,28 @@ userBean user = (userBean) request.getSession().getAttribute("user");
                         <div class="form-group">
                           <div class="container" style="width:100%">
                             <div class="row">
-                                <div class = "col-md-6">
+                                <div class = "col-md-6"     style="padding-left: 0">
                                     <div class="container">
-                                        <label for="" class=" control-label" style="font-family:Open Sans; color:#fff;font-size:20px;display:block">Domain of Interests</label>
+                                        <label for="" class=" control-label" style="font-family:Open Sans; color:#fff;font-size:20px;display:block;font-weight:400">Domain of Interests</label>
                                     </div>
                                         <div class = "col-xs-4">
                                             <label class="checkbox-inline" style="font-family:Open Sans; color:#fff">
-                                            <input class= "domainCheckbox" type="checkbox"  id="inlineCheckbox1" name= "domainCheckbox" value="Computer Science" > Computer Scienece
+                                            <input class= "domainCheckbox" type="checkbox"  id="inlineCheckbox1" name= "domainCheckbox" value="1" > Computer Scienece
                                             </label>
                                         </div>
                                         <div class = "col-xs-4">
                                             <label class="checkbox-inline" style="font-family:Open Sans; color:#fff">
-                                            <input class= "domainCheckbox" type="checkbox"  id="inlineCheckbox1" name= "domainCheckbox" value="Computer Science"> Information Science
+                                            <input class= "domainCheckbox" type="checkbox"  id="inlineCheckbox1" name= "domainCheckbox" value="2"> Information Science
                                             </label>
                                         </div>
                                         <div class = "col-xs-4">
                                             <label class="checkbox-inline" style="font-family:Open Sans; color:#fff">
-                                             <input class= "domainCheckbox" type="checkbox"  id="inlineCheckbox1" name= "domainCheckbox" value="Computer Science"> Library Information Science
+                                             <input class= "domainCheckbox" type="checkbox"  id="inlineCheckbox1" name= "domainCheckbox" value="3"> Library Information Science
                                              </label>
                                         </div>
                                 </div>
                                 <div class = "col-md-6">
-                                    <label class="control-label" style="font-family:Open Sans; color:#fff;font-size:20px;display:block">Your Available Time</label>
+                                    <label class="control-label" style="font-family:Open Sans; color:#fff;font-size:20px;display:block;font-weight:400">Your Available Time</label>
                                     <input type="text" name="form-avatime" placeholder="Time...(.e.g 5 hours per week)" class="form-control " id="form-avatime">
                                 </div>
                                        
@@ -159,7 +159,7 @@ userBean user = (userBean) request.getSession().getAttribute("user");
    
                         <div class="form-group">
                             <div class="container">
-                                 <label for="" class=" control-label" style="font-family:Open Sans; color:#fff;font-size:20px;display:block">Domain of Interests</label>
+                                 <label for="" class=" control-label" style="font-family:Open Sans; color:#fff;font-size:20px;display:block;font-weight:400">Domain of Interests</label>
                             
                                 <div class="row">
                                 <div class = "col-xs-4">

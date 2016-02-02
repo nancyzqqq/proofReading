@@ -51,7 +51,7 @@ public class userSettingServlet extends HttpServlet {
         String institution = request.getParameter("form_institution");
         String domainIn = "";
         String[]  domainArr = request.getParameterValues("domainCheckbox");
-       
+        System.out.print(domainArr[0]+"~~~~~~~~~~~~~~~~~");
         if(firstname == null || firstname.equals("")){
             firstname = or_firstname;
         }

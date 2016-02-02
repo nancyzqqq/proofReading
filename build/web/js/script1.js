@@ -1,4 +1,64 @@
+function checkUserType(username){
+  
+    $.ajax({
+    type:"POST",
+    url:"getUserType",
+    data:"username=" + username,
+    success:function(msg){
+
+        var usertype =parseInt(msg);
+        console.log(usertype);
+        clickVolSection(usertype);
+        }
+
+      });
+
+}
+
+function clickVolSection(usertype){
+
+  $("#volPointer").click(function(){
+
+      console.log(usertype);
+      if(usertype == 0){
+         $( "#dialog" ).dialog({
+          autoOpen: false,
+          width: 500,
+          show: {
+           effect: "blind",
+           duration: 1000
+          },
+          hide: {
+           effect: "explode",
+            duration: 1000
+          },
+          buttons: {
+            "Go to register!!": function() {
+              $( this ).dialog( "close" );
+              window.location.href='regVol.jsp';
+            },
+            "Cancel": function() {
+              $( this ).dialog( "close" );
+            }
+          }
+        });
+ 
+   
+      $( "#dialog" ).dialog( "open" );
+  
+      }else if(usertype == 1){
+        console.log("is volunteer");
+        window.location.href='regVol.jsp';
+      }
+
+
+});
+}
+
+
+
 $(document).ready(function() {
+
 
 	$("#requestForm").hide();
 	$("#requestForm").css("backrgound-image","url(img/backgrounds/5022.png) no-repeat");
@@ -17,7 +77,7 @@ $(document).ready(function() {
     console("123");
 });
   
-
+   
   $(".sidebar-nav li").mouseover(function(){
          // $( this ).fadeOut( 100 );
          $( this ).fadeIn( 100 );
@@ -30,14 +90,25 @@ $(document).ready(function() {
      });
 
   var username =document.getElementById("username").innerHTML;
+
+  /*
+  check for user_type when click the my Voluntary Button
+  */
+  checkUserType(username);
+
+
   console.log(username);
   var dataset;
   var finaldataSet;
 
-  // function enableClick(){
 
 
-  // }  
+  
+
+
+
+
+
   $.ajax({
     type:"POST",
     url:"request",

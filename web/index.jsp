@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Proofreading</title>
+        <title>Proofreading Sign in </title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
@@ -14,21 +14,16 @@
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/form-elements.css">
         <link rel="stylesheet" href="css/style.css">
-
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-        <!-- Favicon and touch icons -->
-        <link rel="shortcut icon" href="ico/favicon.png">
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+        <!-- GOOGLE FONT -->
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,greek,greek-ext' rel='stylesheet' type='text/css'>
+        <!-- JAVASCRIPT -->
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="js/jquery.backstretch.min.js"></script>
+        <script src="js/indexJs.js"></script>
+        
+        
+       
     </head>
 
     <body>
@@ -43,8 +38,7 @@
                             <h1 style="color:#727272;font-family:Open Sans"><strong>ProofReading</strong> Log in | sign up</h1>
                             <div class="description">
                             	<p>
-	                            	<!-- This is a free responsive login form made with Bootstrap. 
-	                            	Download it on <a href="http://azmind.com"><strong>AZMIND</strong></a>, customize and use it as you like! -->
+	                            	
                             	</p>
                             </div>
                         </div>
@@ -85,7 +79,7 @@
 		                    </div>
                         </div>
                     </div>
-                    <div class="row">
+                  <!--   <div class="row">
                         <div class="col-sm-6 col-sm-offset-3 social-login">
                         	<h3 style="color:#727272">...you can follow us on:</h3>
                         	<div class="social-login-buttons">
@@ -100,21 +94,14 @@
 	                        	</a>
                         	</div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             
         </div>
 
 
-        <!-- Javascript -->
-        <script src="js/jquery-1.11.1.min.js"></script>
-        <script src="bootstrap/js/bootstrap.min.js"></script>
-        <script src="js/jquery.backstretch.min.js"></script>
-        <script src="js/scripts.js"></script>
-        <script type="text/javascript">
 
-        </script>
 
 
     </body>

@@ -1,10 +1,16 @@
+<%@ page import="edu.pitt.beans.*" %>
 <!DOCTYPE html>
 <html lang="en">
 
 <%
 //        String username = reu....;
-
-
+String name = (String) request.getSession().getAttribute("username");
+userBean user = (userBean)request.getSession().getAttribute("user");
+int type = user.getType();
+String url = "";
+if(type == 0){
+    
+}
 %>
 
 <head>
@@ -12,10 +18,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <!-- jquery -->
+    
     <script src="js/jquery-1.11.1.min.js"></script>
-    <title>Mainpage</title>
+    <title>ProofReading Mainpage</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -24,8 +30,12 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link href="css/simple-sidebar.css" rel="stylesheet">
+    <!-- google fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,greek,greek-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
+    <!-- jquery dialog -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script type="text/javascript" src="js/script1.js"></script>
     
 
@@ -43,7 +53,7 @@
                         ProofReading
                     </a>
                 </li>
-                <li>
+                <li style="background-color:rgba(256,256,256,0.2)">
                 <a href="usermainpage.jsp" style="color:#fff">My Home</a>
                 </li>
                 <li>
@@ -51,14 +61,14 @@
                 </li>
 
                 <li>
-                    <a href="#" style="color:#fff">Events</a>
+                    <a id = "volPointer" href="#" style="color:#fff">My Voluntary</a>
                 </li>
 
                 <li>
                     <a href="userBasicInfoSetting.jsp" style="color:#fff">Settings</a>
                 </li>
                 <li>
-                    <a href="#" style="color:#fff">Feedback</a>
+                    <a  id="" href="logout.jsp" style="color:#fff">Log out</a>
                 </li>
             </ul>
         </div>
@@ -144,6 +154,11 @@
                 </div>
 
             </div>
+
+
+        </div>
+        <div id="dialog" title="Basic dialog">
+            <p>You have to register to be a volunteer!</p>
         </div>
 
     </div>

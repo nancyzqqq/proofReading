@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bootstrap Login Form Template</title>
+        <title>ProofReading User Sign up</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
@@ -58,6 +58,7 @@
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="form-username">Username</label>
 			                        	<input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username">
+                                        <div style="color:#fff" id="status"></div>
 			                        </div>
                                     <div class="form-group">
                                         <label class="sr-only" for="form-username">E-mail</label>
@@ -109,7 +110,7 @@
         <script src="js/jquery-1.11.1.min.js"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <script src="js/jquery.backstretch.min.js"></script>
-        <script src="js/scripts.js"></script>
+        <script src="js/regUser.js"></script>
         <script type="text/javascript">
         
         </script>

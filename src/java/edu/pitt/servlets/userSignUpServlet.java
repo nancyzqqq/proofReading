@@ -76,8 +76,8 @@ public class userSignUpServlet extends HttpServlet {
             }
        //db.query(insertQuery);
        toJSP = "usermainpage.jsp";
-       RequestDispatcher rd = request.getRequestDispatcher(toJSP);
-       rd.forward(request, response);
+       request.getRequestDispatcher(toJSP).forward(request, response);
+       
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -92,11 +92,13 @@ public class userSignUpServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+       
         try {
             processRequest(request, response);
         } catch (Exception ex) {
             Logger.getLogger(userSignUpServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
+       
     }
 
     /**

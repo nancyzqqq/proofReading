@@ -197,6 +197,36 @@ public class DBConnect {
         }
          return userid;
     }
+    public int getUserType(String username)throws Exception{
+
+        int type = 0;
+         try
+        {
+           Class.forName(DBDriver);
+           conn=DriverManager.getConnection(url,uid,pwd);
+           Statement stmt=conn.createStatement();
+           String query = "SELECT TYPE FROM USER WHERE username = '"+username+"'";
+           rs = stmt.executeQuery(query);
+           
+           while (rs.next()) {
+
+                type = rs.getInt("type");
+               
+               
+            }
+            
+           rs.close();
+           stmt.close();
+           conn.close();
+           
+           
+        }
+        catch(SQLException ee)
+        {
+            System.out.println(ee.getMessage());
+        }
+         return type;
+    }
    
      public ArrayList<taskBean> searchAllTask(String query) throws Exception{
         
@@ -234,4 +264,34 @@ public class DBConnect {
         return arr;
     }
     
+     public int getVolID(int userid)throws Exception{
+        int volid=0;
+
+        try
+        {
+           Class.forName(DBDriver);
+           conn=DriverManager.getConnection(url,uid,pwd);
+           Statement stmt=conn.createStatement();
+           String query = "SELECT VolID FROM vol_main WHERE UserID = '"+userid+"'";
+           rs = stmt.executeQuery(query);
+           
+           if (rs.next()) {
+                
+               volid = rs.getInt("VolID");
+              
+               
+            }
+            
+           rs.close();
+           stmt.close();
+           conn.close();
+           
+           
+        }
+        catch(SQLException ee)
+        {
+            System.out.println(ee.getMessage());
+        }
+         return volid;
+    }
 }

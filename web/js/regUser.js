@@ -1,0 +1,62 @@
+
+jQuery(document).ready(function() {
+
+    //$("#status").html("124");
+    //document.getElementById("status").innerHTML="123";
+
+
+    /*
+       validate username availabilty
+    */
+    $("#form-username").bind("blur", function(){
+        console.log($(this).val());
+        var username = $(this).val();
+        $.ajax({
+            type:"POST",
+            url:"checkUserNameAvail",
+            data:"username=" + username,
+            success:function(msg){
+                //console.log(msg);
+                $("#status").html(msg);
+            }
+
+        });
+
+    });
+
+    $("#signup").click(function(){
+        window.location.href='signup.jsp';
+    })
+	
+
+    $("#login1").click(function(){
+        window.location.href='index.jsp';
+    })
+    /*
+        Fullscreen background
+    */
+    $.backstretch("img/backgrounds/5034.png");
+    
+    /*
+        Form validation
+    */
+    $('.login-form input[type="text"], .login-form input[type="password"], .login-form textarea').on('focus', function() {
+    	$(this).removeClass('input-error');
+    });
+    
+    // $('.login-form').on('submit', function(e) {
+    	
+    // 	$(this).find('input[type="text"], input[type="password"], textarea').each(function(){
+    // 		if( $(this).val() == "" ) {
+    // 			e.preventDefault();
+    // 			$(this).addClass('input-error');
+    // 		}
+    // 		else {
+    // 			$(this).removeClass('input-error');
+    // 		}
+    // 	});
+    	
+    // });
+    
+    
+});
